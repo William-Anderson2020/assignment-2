@@ -52,18 +52,12 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
   acc = this[0];
   for(x = 1; x < this.length; x++){
     acc = callbackFn(acc, this[x]);
   }
   return acc;
 };
-
-test = [1]
-test2 = [1, 2, 3]
-test3 = []
-console.log(test.myReduce((acc, val) => acc + val))
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
