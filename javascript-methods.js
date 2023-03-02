@@ -91,9 +91,6 @@ Array.prototype.myLastIndexOf = function(searchElement) {
   return index;
 };
 
-test = [1, 2, 3, 2];
-console.log(test.myLastIndexOf(1), test.myLastIndexOf(2), test.myLastIndexOf(4));
-
 // KEYS //
 Object.myKeys = function(object) {
   // Place your code here.
