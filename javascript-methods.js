@@ -93,7 +93,11 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+  keys = [];
+  for(key in object){
+    keys.push(key);
+  }
+  return keys;
 };
 
 // VALUES //
