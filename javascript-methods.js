@@ -19,7 +19,6 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
   filtered = [];
   this.forEach(el => {
       if(callbackFn(el)){
@@ -28,11 +27,6 @@ Array.prototype.myFilter = function(callbackFn) {
     });
   return filtered;
 };
-
-test = [1, 2, 3, 4, 5]
-test_res = test.myFilter(x => x > 3);
-test_res = test_res.myMap(x => x**2)
-console.log(test, test_res);
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
