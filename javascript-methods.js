@@ -62,7 +62,17 @@ Array.prototype.myReduce = function(callbackFn) {
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
   // Place your code here.
+  res = false;
+  this.forEach(el => {
+    if(el === searchElement){
+      res = true;
+    }
+  });
+  return res;
 };
+
+test = [1, 2, 3];
+console.log(test.myIncludes(1), test.myIncludes("1"), test.myIncludes(0));
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
