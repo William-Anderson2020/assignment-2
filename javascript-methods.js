@@ -10,15 +10,29 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
+  mapped = [];
   for(x = 0; x < this.length; x++){
-    this[x] = callbackFn(this[x])
+    mapped.push(callbackFn(this[x]));
   }
+  return mapped;
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
   // Place your code here.
+  filtered = [];
+  this.forEach(el => {
+      if(callbackFn(el)){
+        filtered.push(el);
+      }
+    });
+  return filtered;
 };
+
+test = [1, 2, 3, 4, 5]
+test_res = test.myFilter(x => x > 3);
+test_res = test_res.myMap(x => x**2)
+console.log(test, test_res);
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
