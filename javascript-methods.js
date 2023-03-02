@@ -30,30 +30,40 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  res = false
+  res = false;
   this.forEach(el =>{
     if(callbackFn(el) == true){
-      res = true
+      res = true;
     }
-  })
-  return res
+  });
+  return res;
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  res = true
+  res = true;
   this.forEach(el =>{
     if(callbackFn(el) == false){
-      res = false
+      res = false;
     }
-  })
-  return res
+  });
+  return res;
 };
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
   // Place your code here.
+  acc = this[0];
+  for(x = 1; x < this.length; x++){
+    acc = callbackFn(acc, this[x]);
+  }
+  return acc;
 };
+
+test = [1]
+test2 = [1, 2, 3]
+test3 = []
+console.log(test.myReduce((acc, val) => acc + val))
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
