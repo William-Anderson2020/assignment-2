@@ -30,18 +30,28 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
+  res = false
   this.forEach(el =>{
     if(callbackFn(el) == true){
-      return true
+      res = true
     }
   })
-  return false
+  return res
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  res = true
+  this.forEach(el =>{
+    if(callbackFn(el) == false){
+      res = false
+    }
+  })
+  return res
 };
+
+test = [1, 2, 3, 4]
+console.log(test.myEvery(x => x > 2), test.myEvery(x => x < 5))
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
