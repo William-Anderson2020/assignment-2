@@ -103,4 +103,12 @@ Object.myKeys = function(object) {
 // VALUES //
 Object.myValues = function(object) {
   // Place your code here.
+  values = [];
+  for(key in object){
+    values.push(object[key]);
+  }
+  return values;
 };
+
+test = {key: "value", key2 : "value2"};
+console.log(Object.myValues(test));
