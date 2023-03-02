@@ -30,7 +30,12 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  this.forEach(el =>{
+    if(callbackFn(el) == true){
+      return true
+    }
+  })
+  return false
 };
 
 // EVERY //
