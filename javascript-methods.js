@@ -31,7 +31,16 @@ Array.prototype.myFilter = function(callbackFn) {
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
   // Place your code here.
+  this.forEach(el =>{
+    if(callbackFn(el) == true){
+      return true
+    }
+  })
+  return false
 };
+
+test = [2, 4, 6, 8]
+console.log(test.some(x => x < 2), test.some(x => x > 3))
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
