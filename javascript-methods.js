@@ -50,9 +50,6 @@ Array.prototype.myEvery = function(callbackFn) {
   return res
 };
 
-test = [1, 2, 3, 4]
-console.log(test.myEvery(x => x > 2), test.myEvery(x => x < 5))
-
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
   // Place your code here.
