@@ -72,7 +72,12 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  // Place your code here.
+  for(x = 0; x < this.length; x++){
+    if(this[x] === searchElement){
+      return x;
+    }
+  }
+  return undefined;
 };
 
 // LASTINDEXOF //
