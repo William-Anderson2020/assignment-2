@@ -82,8 +82,17 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+  index = -1;
+  for(x = 0; x < this.length; x++){
+    if(this[x] === searchElement){
+      index = x;
+    }
+  }
+  return index;
 };
+
+test = [1, 2, 3, 2];
+console.log(test.myLastIndexOf(1), test.myLastIndexOf(2), test.myLastIndexOf(4));
 
 // KEYS //
 Object.myKeys = function(object) {
