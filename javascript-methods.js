@@ -20,29 +20,29 @@ Array.prototype.myMap = function(callbackFn) {
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
   filtered = [];
-  this.forEach(el => {
+  for(el in this){
       if(callbackFn(el)){
         filtered.push(el);
       }
-    });
+    };
   return filtered;
 };
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
   res = false;
-  this.forEach(el =>{
+  for(el in this){
     if(callbackFn(el) == true){
       res = true;
     }
-  });
+  };
   return res;
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
   res = true;
-  this.forEach(el =>{
+  for(el in this){
     if(callbackFn(el) == false){
       res = false;
     }
@@ -62,11 +62,11 @@ Array.prototype.myReduce = function(callbackFn) {
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
   res = false;
-  this.forEach(el => {
+  for(el in this){
     if(el === searchElement){
       res = true;
     }
-  });
+  };
   return res;
 };
 
