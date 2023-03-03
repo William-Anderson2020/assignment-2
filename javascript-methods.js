@@ -46,7 +46,7 @@ Array.prototype.myEvery = function(callbackFn) {
     if(callbackFn(el) == false){
       res = false;
     }
-  });
+  };
   return res;
 };
 
